@@ -31,7 +31,7 @@ Make sure your project is structured like this:
 
 Dataset
 The script expects your images to be organized into a folder structure where each subdirectory represents a class. For example:
-
+```
 dataset/
 ├── cats/
 │   ├── cat_01.jpg
@@ -39,6 +39,8 @@ dataset/
 └── dogs/
     ├── dog_01.jpg
     └── dog_02.jpg
+
+```
 
 How to Run the Script
 To run the k-NN classifier, use the following command in your terminal. You must specify the path to your dataset using the --dataset argument.
