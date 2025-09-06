@@ -1,7 +1,7 @@
-### Image Classification with K-Nearest Neighbors
+## Image Classification with K-Nearest Neighbors
 This project demonstrates a simple image classification pipeline using the K-Nearest Neighbors (k-NN) algorithm. The script trains a k-NN classifier on raw pixel intensities from a dataset of images and then evaluates its performance.
 
-Features
+### Features
 Simple Image Preprocessing: Resizes images to a standard size for consistent input.
 
 Raw Pixel Intensities: Uses the flattened pixel values of images as features.
@@ -10,15 +10,17 @@ K-NN Classification: Trains and evaluates a k-NN model.
 
 Performance Metrics: Outputs a detailed classification report, including precision, recall, and F1-score.
 
-Getting Started
+### Getting Started
 Prerequisites
 You'll need Python 3 and the following libraries to run the script. You can install them using pip:
-
+```
 pip install scikit-learn numpy opencv-python
+```
 
-Project Structure
+### Project Structure
 Make sure your project is structured like this:
 
+```
 .
 ├── knn.py
 └── pipeline/
@@ -29,8 +31,11 @@ Make sure your project is structured like this:
     └── utils/
         └── simpleimageutils.py
 
-Dataset
+```
+
+### Dataset
 The script expects your images to be organized into a folder structure where each subdirectory represents a class. For example:
+
 ```
 dataset/
 ├── cats/
@@ -42,21 +47,27 @@ dataset/
 
 ```
 
-How to Run the Script
+### How to Run the Script
 To run the k-NN classifier, use the following command in your terminal. You must specify the path to your dataset using the --dataset argument.
 
+```
 python knn.py --dataset path/to/your/dataset
+```
 
-Command-line Arguments
+### Command-line Arguments
+```
 --dataset (required): The path to the root directory of your image dataset.
 
 --neighbors (optional): The number of nearest neighbors for the k-NN classifier. The default is 1.
 
 --jobs (optional): The number of CPU cores to use for calculating distances. Use -1 to utilize all available cores. The default is -1.
 
-Example Output
+```
+
+### Example Output
 When you run the script, you'll see information about the data loading process, memory usage, and finally, a detailed classification report like the one below.
 
+```
 [INFO] loading images...
 [INFO] processed 500/3000
 [INFO] processed 1000/3000
@@ -76,5 +87,7 @@ When you run the script, you'll see information about the data loading process, 
    macro avg       0.53      0.45      0.45       750
 weighted avg       0.53      0.45      0.45       750
 
-License
+```
+
+### License
 This project is open-source and available under the MIT License.
